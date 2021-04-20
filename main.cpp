@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main(){
-  std::cout << "B is BAD" << std::endl;
+  std::cout << "B is GOD" << std::endl;
 }
 
