@@ -1,2 +1,5 @@
-# githubtest
+# githubtest BBBBBBBBBBBBBBBBBBBBBBBB
 githubの練習をしよう
+
+BBBBBB is BBBBBBBBBADDDDDDDDDDD
+
