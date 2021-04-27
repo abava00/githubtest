@@ -2,6 +2,8 @@
 ## githubの練習をしようとしたけどあきらめた  
 ### BBBBBB is BBBBBBBBBADDDDDDDDDDD
 \
+だれでもプルリク，イシュー大歓迎
+
 0. git init *しよう*
 1. git add FILENAME *または* git add . *しよう*
 2. git commit -m 'MESSAGE' *しよう*
