@@ -19,7 +19,10 @@
 
 ## commit したときに "Author identity unknown" と表示された場合
 1. git config --global user.email "EMAIL" *しよう*
+
+
     実際のメアドを入力したくないときは貴方のプロフィールにある "Email" 欄の"Keep my email addresses private" にある "012345678+USERNAME@users.noreply.github.com" を入力しよう
 2. git config --global user.name "USERNAME" *しよう*
-    Githubに登録しているユーザー名を入力しよう \*筆者ならabava00
+
+    Githubに登録しているユーザー名を入力しよう※筆者ならabava00
 
