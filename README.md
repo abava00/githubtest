@@ -26,3 +26,31 @@
 
     Githubに登録しているユーザー名を入力しよう※筆者ならabava00
 
+## Git log に存在するusernameとEmailアドレスを書き換える場合
+
+1. AUTHERを書き換える場合。
+   ```
+    git filter-branch -f --commit-filter '
+         if [ "$GIT_AUTHER_EMAIL" = "書き換え元のEmailアドレス" ];
+         then
+                 GIT_AUTHER_NAME="書き換えた後に表示されるuser名";
+                 GIT_AUTHER_EMAIL="書き換えた後に表示されるEmailアドレス";
+                 git commit-tree "$@";
+         else
+                 git commit-tree "$@";
+         fi' HEAD
+   ```
+2. COMMITERを書き換える場合。
+   ```
+    git filter-branch -f --commit-filter '
+         if [ "$GIT_COMMITTER_EMAIL" = "書き換え元のEmailアドレス" ];
+         then
+                 GIT_COMMITTER_NAME="書き換えた後に表示されるuser名";
+                 GIT_COMMITTER_EMAIL="書き換えた後に表示されるEmailアドレス";
+                 git commit-tree "$@";
+         else
+                 git commit-tree "$@";
+         fi' HEAD
+   ```
+3. リモートブランチに反映するため、`git push -f`を行う。  
+   これでメールアドレスが見られることはなくなるだろう...
