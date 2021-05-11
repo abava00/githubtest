@@ -5,11 +5,24 @@
 だれでもプルリク，イシュー大歓迎
 
 ## 初めに
-0. git init *しよう*
-1. git add FILENAME *または* git add . *しよう*
-2. git commit -m 'MESSAGE' *しよう*
-3. git push *しよう*  
+Git と Github は別物です!!！
+Git：アプリケーション (WindowsユーザーはGit_for_windows を導入しましょう)
+Github : ウェブサイト
 
+##Gitの始め方--レポジトリを作ろう編--
+
+0. git init *しよう*
+    
+    これを行うとGitに関する設定ファイル(.git)が作成されます。 これが存在するファイル以外でGitを使用しようとしても上手くいかない可能性があります
+1. git add FILENAME *または* git add . *しよう*
+
+    これを使うことで変更内容をインデックスに追加できます.ボール（ファイル）を拾った状態でしょうか    
+2. git commit -m 'MESSAGE' *しよう*
+
+    これを使うことでローカルリポジトリにコミットされます ボールを投げる準備をした状態
+3. git push *しよう* 
+ 
+    これを使うことでローカルリポジトリの内容をリモートリポジトリに送信できます ボールを投げました
 
 
 ## ブランチのやりかた
@@ -40,7 +53,7 @@
                  git commit-tree "$@";
          fi' HEAD
    ```
-2. COMMITERを書き換える場合。
+2. COMMITERを書き換える場合
    ```
     git filter-branch -f --commit-filter '
          if [ "$GIT_COMMITTER_EMAIL" = "書き換え元のEmailアドレス" ];
